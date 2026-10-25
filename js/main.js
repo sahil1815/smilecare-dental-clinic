@@ -251,48 +251,41 @@
     }
   }
 
-  // Render Top Offer & Emergency Bar
+  // Render Unified Top Announcement Bar
   function renderTopBars() {
     const t = getT();
-    const offerContainer = document.getElementById('offer-ribbon-container');
-    if (offerContainer) {
-      if (CLINIC_CONFIG.offerRibbon && CLINIC_CONFIG.offerRibbon.enabled) {
-        offerContainer.innerHTML = `
-          <div class="top-notice-bar">
-            <span>${CLINIC_CONFIG.offerRibbon.text[state.lang]}</span>
-            <a href="${CLINIC_CONFIG.offerRibbon.linkTarget}">
+    const slot = document.getElementById('top-announcement-slot');
+    if (!slot) return;
+
+    slot.innerHTML = `
+      <div class="top-announcement-bar">
+        <div class="container top-bar-inner">
+          <div class="top-bar-emergency">
+            <span class="pulse-dot"></span>
+            <span class="top-bar-emergency-label">${state.lang === 'bn' ? 'জরুরি হটলাইন:' : '24/7 Helpline:'}</span>
+            <a href="tel:${CLINIC_CONFIG.contact.emergencyPhoneTel}" class="emergency-call-pill">
+              ${getIcon('phone', 'mini-icon')}
+              <span>${CLINIC_CONFIG.contact.emergencyPhone}</span>
+            </a>
+          </div>
+          <div class="top-bar-offer">
+            <span class="top-bar-offer-badge">${CLINIC_CONFIG.offerRibbon.badge[state.lang]}</span>
+            <span class="top-bar-offer-text">${CLINIC_CONFIG.offerRibbon.text[state.lang]}</span>
+            <a href="${CLINIC_CONFIG.offerRibbon.linkTarget}" class="top-bar-offer-link">
               ${state.lang === 'bn' ? 'সিরিয়াল নিন →' : 'Book Free Exam →'}
             </a>
           </div>
-        `;
-        offerContainer.style.display = 'block';
-      } else {
-        offerContainer.style.display = 'none';
-      }
-    }
-
-    const emergencyStrip = document.getElementById('emergency-strip-container');
-    if (emergencyStrip) {
-      emergencyStrip.innerHTML = `
-        <div class="emergency-strip">
-          <div class="pulse-badge">
-            <span class="pulse-dot"></span>
-            <span>${t.emergencyBanner.text}</span>
-          </div>
-          <a href="tel:${CLINIC_CONFIG.contact.emergencyPhoneTel}" class="emergency-btn-pill">
-            ${getIcon('phone', 'inline-icon')}
-            <span>${CLINIC_CONFIG.contact.emergencyPhone}</span>
-          </a>
         </div>
-      `;
-    }
+      </div>
+    `;
   }
 
   // Render Header Brand & Navigation
   function renderHeader() {
     const t = getT();
     const brandName = CLINIC_CONFIG.brand.name[state.lang];
-    const brandTagline = CLINIC_CONFIG.brand.tagline[state.lang];
+    const brandShortName = CLINIC_CONFIG.brand.shortName[state.lang];
+    const brandTagline = CLINIC_CONFIG.brand.city[state.lang];
 
     // Logo & Title
     const brandLogoContainer = document.getElementById('header-brand-slot');
@@ -302,8 +295,9 @@
           ${getIcon('tooth', 'header-tooth-icon')}
         </div>
         <div class="brand-text-wrapper">
-          <span class="brand-title">${brandName}</span>
-          <span class="brand-tagline">${CLINIC_CONFIG.brand.city[state.lang]}</span>
+          <span class="brand-title brand-title-full">${brandName}</span>
+          <span class="brand-title brand-title-short">${brandShortName}</span>
+          <span class="brand-tagline">${brandTagline}</span>
         </div>
       `;
     }
@@ -1397,14 +1391,16 @@
     if (stickyBar) {
       stickyBar.innerHTML = `
         <div class="sticky-mobile-book-bar">
-          <a href="tel:${CLINIC_CONFIG.contact.phoneTel}" class="sticky-quick-call" aria-label="Call clinic directly">
-            ${getIcon('phone')}
+          <a href="tel:${CLINIC_CONFIG.contact.phoneTel}" class="sticky-bar-action-btn sticky-call-btn" aria-label="Call clinic directly">
+            ${getIcon('phone', 'bar-icon')}
+            <span>${t.stickyMobileBar.callBtn}</span>
           </a>
-          <a href="https://wa.me/${CLINIC_CONFIG.contact.whatsappNumber}" target="_blank" rel="noopener" class="sticky-quick-call" style="background:#DCFCE7; color:#15803D;" aria-label="WhatsApp chat">
-            ${getIcon('whatsapp')}
+          <a href="https://wa.me/${CLINIC_CONFIG.contact.whatsappNumber}" target="_blank" rel="noopener" class="sticky-bar-action-btn sticky-wa-btn" aria-label="WhatsApp chat">
+            ${getIcon('whatsapp', 'bar-icon')}
+            <span>WhatsApp</span>
           </a>
-          <a href="#appointment" class="sticky-book-btn">
-            ${getIcon('calendar')}
+          <a href="#appointment" class="sticky-bar-book-btn">
+            ${getIcon('calendar', 'bar-icon')}
             <span>${t.stickyMobileBar.bookBtn}</span>
           </a>
         </div>

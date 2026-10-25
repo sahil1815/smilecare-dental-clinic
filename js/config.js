@@ -908,11 +908,11 @@ const CLINIC_CONFIG = {
       nav: {
         home: "Home",
         services: "Services",
-        whyUs: "Why Choose Us",
+        whyUs: "Why Us",
         doctors: "Specialists",
         pricing: "Pricing",
         gallery: "Results",
-        reviews: "Patient Reviews",
+        reviews: "Reviews",
         appointment: "Book Appointment",
         contact: "Contact"
       },
@@ -1050,13 +1050,13 @@ const CLINIC_CONFIG = {
       siteTitle: "স্মাইলকেয়ার ডেন্টাল অ্যান্ড অর্থোডন্টিক সেন্টার | রাজশাহী",
       nav: {
         home: "হোম",
-        services: "চিকিৎসাসমূহ",
+        services: "সেবাসমূহ",
         whyUs: "কেন আমরা",
-        doctors: "বিশেষজ্ঞ ডাক্তার",
-        pricing: "খরচের তালিকা",
+        doctors: "বিশেষজ্ঞ",
+        pricing: "খরচ",
         gallery: "ফলাফল",
-        reviews: "রোগীর মতামত",
-        appointment: "অ্যাপয়েন্টমেন্ট",
+        reviews: "মতামত",
+        appointment: "সিরিয়াল নিন",
         contact: "যোগাযোগ"
       },
       hero: {
