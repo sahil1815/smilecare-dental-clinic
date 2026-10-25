@@ -408,6 +408,7 @@ ul, ol {
   justify-content: space-between;
   min-height: 4rem;
   padding: 0.4rem 0;
+  gap: clamp(0.75rem, 1.5vw, 1.5rem);
 }
 
 /* Brand Logo */
@@ -416,7 +417,8 @@ ul, ol {
   align-items: center;
   gap: 0.65rem;
   text-decoration: none;
-  min-width: 0;
+  flex-shrink: 0;
+  min-width: max-content;
 }
 
 .brand-icon-wrapper {
@@ -435,7 +437,7 @@ ul, ol {
 .brand-text-wrapper {
   display: flex;
   flex-direction: column;
-  min-width: 0;
+  flex-shrink: 0;
 }
 
 .brand-title {
@@ -446,24 +448,13 @@ ul, ol {
   white-space: nowrap;
 }
 
+/* Brand Title Responsiveness */
 .brand-title-full {
   display: none;
 }
 
-.brand-title-short {
+.brand-title-compact {
   display: block;
-}
-
-@media (min-width: 768px) {
-  .brand-title-full {
-    display: block;
-  }
-  .brand-title-short {
-    display: none;
-  }
-  .brand-title {
-    font-size: 1.15rem;
-  }
 }
 
 .brand-tagline {
@@ -473,11 +464,90 @@ ul, ol {
   white-space: nowrap;
 }
 
+.brand-tagline-default {
+  display: block;
+}
+
+.brand-tagline-compact {
+  display: none;
+}
+
+/* Medium screen / Tablet (640px to 1023px): No horizontal nav links, so full title fits nicely */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .brand-title-full {
+    display: block;
+  }
+  .brand-title-compact {
+    display: none;
+  }
+  .brand-title {
+    font-size: 1.15rem;
+  }
+  .brand-tagline-default {
+    display: block;
+  }
+  .brand-tagline-compact {
+    display: none;
+  }
+}
+
+/* Compact Desktop (1024px to 1239px): Horizontal nav links are visible.
+   Keep brand title compact ("SmileCare Dental") with "Orthodontic Centre • Rajshahi"
+   so ALL 7 nav links, language switcher, and booking CTA fit cleanly on a single line! */
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .brand-title-compact {
+    display: block;
+    font-size: 1.05rem;
+  }
+  .brand-title-full {
+    display: none;
+  }
+  .brand-tagline-compact {
+    display: block;
+    font-size: 0.7rem;
+  }
+  .brand-tagline-default {
+    display: none;
+  }
+  .nav-links {
+    gap: clamp(0.35rem, 0.85vw, 1rem);
+  }
+  .nav-link {
+    font-size: 0.825rem;
+    padding: 0.35rem 0.2rem;
+  }
+  #header-book-cta {
+    padding: 0.42rem 0.8rem;
+    font-size: 0.8125rem;
+  }
+}
+
+/* Wide Desktop (1240px+): Generous space for full clinic title */
+@media (min-width: 1240px) {
+  .brand-title-full {
+    display: block;
+  }
+  .brand-title-compact {
+    display: none;
+  }
+  .brand-title {
+    font-size: 1.15rem;
+  }
+  .brand-tagline-default {
+    display: block;
+  }
+  .brand-tagline-compact {
+    display: none;
+  }
+}
+
 /* Desktop Nav Links */
 .nav-links {
   display: none;
   align-items: center;
-  gap: clamp(0.5rem, 1.1vw, 1.25rem);
+  gap: clamp(0.45rem, 1vw, 1.25rem);
+  white-space: nowrap;
+  flex-shrink: 1;
 }
 
 @media (min-width: 1024px) {
@@ -521,6 +591,18 @@ ul, ol {
   align-items: center;
   gap: 0.75rem;
   flex-shrink: 0;
+}
+
+/* Header Appointment CTA Button */
+#header-book-cta {
+  display: none;
+  white-space: nowrap;
+}
+
+@media (min-width: 640px) {
+  #header-book-cta {
+    display: inline-flex;
+  }
 }
 
 /* Language Switcher Pill */
@@ -576,9 +658,6 @@ ul, ol {
   .brand-tagline {
     font-size: 0.65rem;
   }
-}
-  color: var(--color-text-muted);
-  transition: all var(--transition-fast);
 }
 
 .lang-btn.is-active {

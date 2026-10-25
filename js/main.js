@@ -286,6 +286,7 @@
     const brandName = CLINIC_CONFIG.brand.name[state.lang];
     const brandShortName = CLINIC_CONFIG.brand.shortName[state.lang];
     const brandTagline = CLINIC_CONFIG.brand.city[state.lang];
+    const brandTaglineCompact = CLINIC_CONFIG.brand.taglineCompact ? CLINIC_CONFIG.brand.taglineCompact[state.lang] : brandTagline;
 
     // Logo & Title
     const brandLogoContainer = document.getElementById('header-brand-slot');
@@ -296,8 +297,9 @@
         </div>
         <div class="brand-text-wrapper">
           <span class="brand-title brand-title-full">${brandName}</span>
-          <span class="brand-title brand-title-short">${brandShortName}</span>
-          <span class="brand-tagline">${brandTagline}</span>
+          <span class="brand-title brand-title-compact">${brandShortName}</span>
+          <span class="brand-tagline brand-tagline-default">${brandTagline}</span>
+          <span class="brand-tagline brand-tagline-compact">${brandTaglineCompact}</span>
         </div>
       `;
     }

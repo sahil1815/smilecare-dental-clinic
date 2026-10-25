@@ -29,6 +29,10 @@ const CLINIC_CONFIG = {
       en: "Rajshahi, Bangladesh",
       bn: "রাজশাহী, বাংলাদেশ"
     },
+    taglineCompact: {
+      en: "Orthodontic Centre • Rajshahi",
+      bn: "অর্থোডন্টিক সেন্টার • রাজশাহী"
+    },
     establishedYear: 2012,
     // Dynamic brand color palette (injected into CSS variables on startup)
     colors: {
