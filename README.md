@@ -1,6 +1,11 @@
 # 🦷 SmileCare Dental & Orthodontic Centre (Demo Website)
 > **A High-Converting, Production-Grade Healthcare Website Template for Dentists & Medical Clinics in Bangladesh**
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsahil1815%2Fsmilecare-dental-clinic)
+
+- **GitHub Repository**: [https://github.com/sahil1815/smilecare-dental-clinic](https://github.com/sahil1815/smilecare-dental-clinic)
+- **Live Demo (GitHub Pages)**: [https://sahil1815.github.io/smilecare-dental-clinic/](https://sahil1815.github.io/smilecare-dental-clinic/)
+
 Built with pure vanilla HTML5, CSS3, and modern JavaScript. **Zero backend, zero build steps, zero third-party framework dependencies.** Opens instantly by double-clicking `index.html` or hosting on any static cloud platform.
 
 ---
