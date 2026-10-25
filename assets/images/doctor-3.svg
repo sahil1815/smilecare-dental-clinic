@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="400" height="480">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFF6FF"/>
+      <stop offset="100%" stop-color="#DBEAFE"/>
+    </linearGradient>
+    <linearGradient id="coatGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="480" fill="url(#bgGrad3)"/>
+  <circle cx="200" cy="180" r="140" fill="#FFFFFF" opacity="0.6"/>
+  <!-- Body / Lab Coat -->
+  <path d="M65 480c0-95 45-145 135-145s135 50 135 145z" fill="url(#coatGrad3)"/>
+  <!-- Dark Blue scrub under coat -->
+  <path d="M160 335h80v145h-80z" fill="#0369A1"/>
+  <!-- Coat Lapels -->
+  <path d="M125 335l45 145h-35l-50-145z" fill="#E2E8F0"/>
+  <path d="M275 335l-45 145h35l50-145z" fill="#E2E8F0"/>
+  <!-- Stethoscope -->
+  <path d="M148 340c0 45 18 85 52 85s52-40 52-85" fill="none" stroke="#334155" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="200" cy="430" r="13" fill="#64748B" stroke="#334155" stroke-width="4"/>
+  <!-- Head & Hair -->
+  <rect x="175" y="260" width="50" height="80" rx="8" fill="#E2A781"/>
+  <ellipse cx="200" cy="195" rx="66" ry="78" fill="#E2A781"/>
+  <path d="M134 180c0-45 28-75 66-75s66 30 66 75c-20-22-45-25-66-25s-46 3-66 25z" fill="#0F172A"/>
+  <!-- Short Beard/Mustache (Senior surgeon look) -->
+  <path d="M178 240q22 15 44 0c-4 15-18 20-22 20s-18-5-22-20z" fill="#1E293B" opacity="0.85"/>
+  <!-- Eyes -->
+  <circle cx="172" cy="188" r="4.5" fill="#0F172A"/>
+  <circle cx="228" cy="188" r="4.5" fill="#0F172A"/>
+  <path d="M165 180q7-4 15 0" fill="none" stroke="#0F172A" stroke-width="3" stroke-linecap="round"/>
+  <path d="M220 180q7-4 15 0" fill="none" stroke="#0F172A" stroke-width="3" stroke-linecap="round"/>
+  <!-- Surgeon Headlight/Mirror band -->
+  <rect x="145" y="115" width="110" height="12" rx="4" fill="#334155"/>
+  <circle cx="200" cy="121" r="14" fill="#0284C7" stroke="#FFFFFF" stroke-width="3"/>
+  <circle cx="200" cy="121" r="6" fill="#BAE6FD"/>
+</svg>

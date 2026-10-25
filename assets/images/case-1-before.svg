@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="gumGradB" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#BE185D"/>
+      <stop offset="100%" stop-color="#9D174D"/>
+    </linearGradient>
+    <linearGradient id="stainGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D97706" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#78350F" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+  <!-- Background / Mouth Cavity -->
+  <rect width="600" height="400" fill="#1E293B"/>
+  
+  <!-- Upper Gum -->
+  <path d="M50 110 Q 300 70 550 110 C 520 180 80 180 50 110 Z" fill="url(#gumGradB)"/>
+  
+  <!-- Upper Teeth (Yellowed & Stained) -->
+  <g fill="#EFE8D3" stroke="#D1C39F" stroke-width="2">
+    <!-- Lateral Left -->
+    <rect x="150" y="140" width="60" height="95" rx="14"/>
+    <!-- Central Left -->
+    <rect x="220" y="140" width="75" height="110" rx="16"/>
+    <!-- Central Right -->
+    <rect x="305" y="140" width="75" height="110" rx="16"/>
+    <!-- Lateral Right -->
+    <rect x="390" y="140" width="60" height="95" rx="14"/>
+  </g>
+
+  <!-- Heavy Tartar & Stains on teeth -->
+  <!-- Left central stain -->
+  <path d="M225 180 Q 255 190 285 175 Q 275 240 230 235 Z" fill="url(#stainGrad)"/>
+  <!-- Right central stain -->
+  <path d="M310 175 Q 345 195 370 180 Q 365 240 315 235 Z" fill="url(#stainGrad)"/>
+  <!-- Calculus near gingival margins -->
+  <path d="M222 142 Q 255 155 292 142 L 290 152 Q 255 162 224 152 Z" fill="#92400E"/>
+  <path d="M307 142 Q 345 155 377 142 L 375 152 Q 345 162 309 152 Z" fill="#92400E"/>
+  
+  <!-- Lower Lip / Mouth shadow -->
+  <path d="M50 280 Q 300 340 550 280 C 500 240 100 240 50 280 Z" fill="#881337"/>
+  
+  <!-- Banner label -->
+  <rect x="20" y="20" width="130" height="34" rx="6" fill="#DC2626" opacity="0.95"/>
+  <text x="85" y="42" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">BEFORE (আগে)</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="400" height="480">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEF3C7"/>
+      <stop offset="100%" stop-color="#E0F2FE"/>
+    </linearGradient>
+    <linearGradient id="coatGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F1F5F9"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="480" fill="url(#bgGrad4)"/>
+  <circle cx="200" cy="180" r="140" fill="#FFFFFF" opacity="0.6"/>
+  <!-- Body / Lab Coat -->
+  <path d="M75 480c0-90 45-140 125-140s125 50 125 140z" fill="url(#coatGrad4)"/>
+  <!-- Playful Pink/Coral scrub under coat (Pediatric) -->
+  <path d="M165 330h70v150h-70z" fill="#F43F5E"/>
+  <!-- Head & Hair (Ponytail style) -->
+  <rect x="175" y="260" width="50" height="80" rx="8" fill="#FCD3B0"/>
+  <!-- Back Hair -->
+  <circle cx="200" cy="190" r="80" fill="#1C1917"/>
+  <ellipse cx="200" cy="200" rx="55" ry="68" fill="#FCD3B0"/>
+  <!-- Front Bangs/Hair -->
+  <path d="M145 185c0-40 25-60 55-60s55 20 55 60c-15-18-35-22-55-22s-40 4-55 22z" fill="#1C1917"/>
+  <!-- Friendly Eyes -->
+  <circle cx="178" cy="192" r="4.5" fill="#1C1917"/>
+  <circle cx="222" cy="192" r="4.5" fill="#1C1917"/>
+  <path d="M170 183q8-4 16 0" fill="none" stroke="#1C1917" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M214 183q8-4 16 0" fill="none" stroke="#1C1917" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Warm Broad Smile -->
+  <path d="M184 235c6 10 26 10 32 0" fill="none" stroke="#BE123C" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Stethoscope with a cute teddy badge -->
+  <path d="M152 340c0 40 16 75 48 75s48-35 48-75" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="200" cy="420" r="14" fill="#F59E0B" stroke="#475569" stroke-width="3"/>
+  <circle cx="196" cy="418" r="1.5" fill="#1C1917"/>
+  <circle cx="204" cy="418" r="1.5" fill="#1C1917"/>
+  <path d="M197 423q3 2 6 0" fill="none" stroke="#1C1917" stroke-width="1.5"/>
+</svg>

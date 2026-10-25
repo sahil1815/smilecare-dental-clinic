@@ -1,0 +1,23 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Other projects & archives
+dream-home-decor/
+munia-demo/
+yours-truly/
+yours-truly.zip
+Sahil_Website_Proposal.key
+Sahil_Website_Proposal.pdf
+gallery.html
+gallery-preview.png
+gallery-preview-2.png
+/thumbnails/
+/images/
+.netlify/
+
+# Legacy assets from other projects
+assets/*.jpg
+
+# Vercel / local build artifacts
+.vercel/
