@@ -428,7 +428,7 @@
 
           <div class="hero-doctor-badge-card">
             <div class="hero-doctor-avatar">
-              <img src="assets/images/${firstDoc.photoPlaceholder}.svg" alt="${firstDoc.name[state.lang]}" width="48" height="48" loading="lazy">
+              <img src="${firstDoc.photo || ('assets/images/' + firstDoc.photoPlaceholder + '.jpg')}" alt="${firstDoc.name[state.lang]}" width="48" height="48" loading="lazy">
             </div>
             <div class="hero-doctor-info">
               <span class="hero-doctor-name">${firstDoc.name[state.lang]}</span>
@@ -580,7 +580,7 @@
     grid.innerHTML = CLINIC_CONFIG.doctors.map(doc => `
       <div class="doctor-card reveal-item" data-doctor-id="${doc.id}">
         <div class="doctor-photo-wrap">
-          <img src="assets/images/${doc.photoPlaceholder}.svg" alt="${doc.name[state.lang]}" class="doctor-photo-img" loading="lazy">
+          <img src="${doc.photo || ('assets/images/' + doc.photoPlaceholder + '.jpg')}" alt="${doc.name[state.lang]}" class="doctor-photo-img" loading="lazy">
           <div class="doctor-bmdc-pill">${doc.bmdcReg}</div>
         </div>
         <div class="doctor-card-body">
@@ -710,12 +710,13 @@
         <div class="comparison-wrapper">
           <div class="comparison-container" id="slider-comparison-box">
             <!-- After Image (Underneath) -->
-            <img src="assets/images/${currentCase.id}-after.svg" alt="${t.gallerySection.afterLabel}" class="comparison-image" loading="lazy">
+            <img src="${currentCase.afterImage || ('assets/images/' + currentCase.id + '-after.jpg')}" alt="${t.gallerySection.afterLabel}" class="comparison-image">
             
-            <!-- Before Image (Clipped Overlay) -->
-            <div class="comparison-before-container" id="slider-before-container">
-              <img src="assets/images/${currentCase.id}-before.svg" alt="${t.gallerySection.beforeLabel}" class="comparison-before-image" id="slider-before-img" loading="lazy">
-            </div>
+            <!-- Before Image (Clipped Overlay via clip-path) -->
+            <img src="${currentCase.beforeImage || ('assets/images/' + currentCase.id + '-before.jpg')}" alt="${t.gallerySection.beforeLabel}" class="comparison-before-image" id="slider-before-img">
+
+            <!-- Center Divider Line -->
+            <div class="comparison-divider-line" id="slider-divider"></div>
 
             <!-- Drag Handle -->
             <div class="comparison-slider-handle" id="slider-handle">
@@ -751,33 +752,23 @@
   // Interactive Drag & Range Slider for Before / After
   function setupComparisonSlider() {
     const range = document.getElementById('gallery-range-slider');
-    const beforeContainer = document.getElementById('slider-before-container');
+    const divider = document.getElementById('slider-divider');
     const handle = document.getElementById('slider-handle');
     const comparisonBox = document.getElementById('slider-comparison-box');
     const beforeImg = document.getElementById('slider-before-img');
 
-    if (!range || !beforeContainer || !handle || !comparisonBox) return;
+    if (!range || !handle || !comparisonBox || !beforeImg) return;
 
     function updateSlider(val) {
       const percentage = Math.max(0, Math.min(100, val));
-      beforeContainer.style.width = `${percentage}%`;
+      beforeImg.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
+      beforeImg.style.webkitClipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
+      if (divider) divider.style.left = `${percentage}%`;
       handle.style.left = `${percentage}%`;
-
-      // Keep before image locked to full container width
-      if (beforeImg) {
-        beforeImg.style.width = `${comparisonBox.offsetWidth}px`;
-      }
     }
 
     range.addEventListener('input', (e) => {
       updateSlider(e.target.value);
-    });
-
-    // Handle responsive container resize
-    window.addEventListener('resize', () => {
-      if (beforeImg && comparisonBox) {
-        beforeImg.style.width = `${comparisonBox.offsetWidth}px`;
-      }
     });
 
     // Touch & Mouse Drag on the container directly
@@ -789,8 +780,9 @@
       const clientX = e.touches ? e.touches[0].clientX : e.clientX;
       const offset = clientX - rect.left;
       const pct = (offset / rect.width) * 100;
-      range.value = pct;
-      updateSlider(pct);
+      const clamped = Math.max(0, Math.min(100, pct));
+      range.value = clamped;
+      updateSlider(clamped);
     }
 
     function onPointerDown(e) {
@@ -811,9 +803,7 @@
     window.addEventListener('touchend', onPointerUp);
 
     // Initial sync
-    setTimeout(() => {
-      updateSlider(50);
-    }, 50);
+    updateSlider(50);
   }
 
   // Render Patient Reviews Section (Carousel & Google Badge)

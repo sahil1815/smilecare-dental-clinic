@@ -443,6 +443,7 @@ const CLINIC_CONFIG = {
         en: "Trained in contemporary orthodontic mechanics and digital clear aligner systems. Has successfully aligned over 2,500 smiles with precision and minimal extraction.",
         bn: "আধুনিক ডিজিটাল অর্থোডন্টিক্স এবং স্মাইল ট্রান্সফর্মেশনে অভিজ্ঞ। ২,৫০০ এর বেশি রোগীর হাসির নিখুঁত রূপান্তর করেছেন।"
       },
+      photo: "assets/images/doctor-1.jpg",
       photoPlaceholder: "doctor-1"
     },
     {
@@ -476,6 +477,7 @@ const CLINIC_CONFIG = {
         en: "Known for her exceptionally gentle touch and rotary single-visit root canals. Expert in saving severely compromised teeth that other clinics recommend extracting.",
         bn: "ভীষণ বিনয়ী এবং কোমল হাতের ব্যথাহীন চিকিৎসায় সুপরিচিত। ভেঙে যাওয়া ও তীব্র ব্যথাযুক্ত দাঁত দ্রুত ও সফলভাবে সংরক্ষণ করতে পারদর্শী।"
       },
+      photo: "assets/images/doctor-2.jpg",
       photoPlaceholder: "doctor-2"
     },
     {
@@ -509,6 +511,7 @@ const CLINIC_CONFIG = {
         en: "Pioneered flapless computer-guided implant surgery in Northern Bangladesh. Specializes in complicated wisdom teeth and trauma care.",
         bn: "উত্তরবঙ্গের কম্পিউটার-গাইডেড আধুনিক ডেন্টাল ইমপ্ল্যান্ট সার্জারি বিশেষজ্ঞ। আক্কেল দাঁত ও মুখমণ্ডলের ফ্র্যাকচার চিকিৎসায় শীর্ষস্থানীয়।"
       },
+      photo: "assets/images/doctor-3.jpg",
       photoPlaceholder: "doctor-3"
     },
     {
@@ -542,6 +545,7 @@ const CLINIC_CONFIG = {
         en: "Creates a playful, warm environment so kids never fear the dentist. Expert in baby tooth preservation, fluoride therapy, and early space maintainers.",
         bn: "শিশুদের মন জয় করে খেলার ছলে চিকিৎসা দেন। দুধদাঁতের যত্ন, পিট অ্যান্ড ফিশার সিল্যান্ট এবং ভবিষ্যৎ আঁকাবাঁকা দাঁত প্রতিরোধে পারদর্শী।"
       },
+      photo: "assets/images/doctor-4.jpg",
       photoPlaceholder: "doctor-4"
     }
   ],
@@ -687,6 +691,8 @@ const CLINIC_CONFIG = {
         en: "35-year-old patient with years of severe nicotine and betel nut stains restored to sparkling natural white in a 45-minute single session.",
         bn: "৩৫ বছর বয়সী রোগীর দীর্ঘদিনের পান ও ধূমপানের জেদি দাগ আল্ট্রাসনিক স্কেলিং ও পলিশিংয়ের মাধ্যমে সম্পূর্ণ পরিষ্কার করা হয়েছে।"
       },
+      beforeImage: "assets/images/case-1-before.jpg",
+      afterImage: "assets/images/case-1-after.jpg",
       badgeEn: "Single Session • 45 Mins",
       badgeBn: "১টি সেশন • ৪৫ মিনিট"
     },
@@ -704,6 +710,8 @@ const CLINIC_CONFIG = {
         en: "19-year-old student with severe upper and lower crowding treated non-surgically in 14 months without any visible extraction gaps.",
         bn: "১৯ বছর বয়সী শিক্ষার্থীর আঁকাবাঁকা ও অসমান দাঁত কোনো দাঁত না তুলেই ১৪ মাসে নিখুঁত ও চমৎকার হাসিতে রূপান্তর করা হয়েছে।"
       },
+      beforeImage: "assets/images/case-2-before.jpg",
+      afterImage: "assets/images/case-2-after.jpg",
       badgeEn: "14 Months Treatment",
       badgeBn: "১৪ মাসের চিকিৎসা"
     },
@@ -721,6 +729,8 @@ const CLINIC_CONFIG = {
         en: "Trauma case where a fractured central incisor was rescued via painless rotary endodontics and a color-matched ultra-strong zirconia crown.",
         bn: "আঘাতে ভেঙে যাওয়া সামনের দাঁতের ব্যথাহীন রুট ক্যানেল শেষে প্রাকৃতিক রঙের জার্কোনিয়া ক্যাপ বসিয়ে নিখুঁত রূপ দেওয়া হয়েছে।"
       },
+      beforeImage: "assets/images/case-3-before.jpg",
+      afterImage: "assets/images/case-3-after.jpg",
       badgeEn: "2 Visits • Lifetime Smile",
       badgeBn: "২টি ভিজিট • স্থায়ী সমাধান"
     }

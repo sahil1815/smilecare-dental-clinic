@@ -46,14 +46,13 @@ Built with pure vanilla HTML5, CSS3, and modern JavaScript. **Zero backend, zero
 │   └── main.js             # Engine for live status, bilingual rendering, & interactions
 ├── assets/
 │   ├── favicon.svg         # Crisp dental tooth emblem favicon
-│   └── images/             # Vector doctor portraits & clinical before/after graphics
-│       ├── doctor-1.svg
-│       ├── doctor-2.svg
-│       ├── doctor-3.svg
-│       ├── doctor-4.svg
-│       ├── case-1-before.svg & case-1-after.svg (Whitening)
-│       ├── case-2-before.svg & case-2-after.svg (Orthodontics)
-│       └── case-3-before.svg & case-3-after.svg (Zirconia Crown)
+│   └── images/             # Authentic clinical teeth & doctor photography (<50KB optimized)
+│       ├── clinic-operatory.jpg  # Modern dental chair operatory atmosphere
+│       ├── doctor-1.jpg to doctor-4.jpg (Professional medical portrait photography)
+│       ├── case-1-before.jpg & case-1-after.jpg (Ultrasonic Scaling & Calculus Removal)
+│       ├── case-2-before.jpg & case-2-after.jpg (Orthodontic Realignment)
+│       ├── case-3-before.jpg & case-3-after.jpg (Cosmetic Zirconia Veneers & Crowns)
+│       └── *.svg (Vector fallbacks)
 └── README.md               # Rebranding & deployment documentation
 ```
 
